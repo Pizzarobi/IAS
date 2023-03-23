@@ -3,7 +3,7 @@
 ## Motivation
 
 ### Märkte für IAS:
-| Markt | Aktuell | Kurzfristig (5-10 Jr).) | Langfristig (10-20 Jr.) |
+| Markt | Aktuell | Kurzfristig (5-10 Jr). | Langfristig (10-20 Jr.) |
 | --- | --- | --- | --- |
 | Logistik | Spurgebundene FTS ohne Manipulator (Fahrerlose Transport Systeme)| Autonome mobile Roboter | Kooperative mobile Roboter |
 | Flugzeuge | Ferngesteuerte Drohnen | Autonome Einzeldrohnen | Drohnenschwärme |
@@ -11,7 +11,7 @@
 | Haushaltsgeräte | Staubsauger/Rasenmäher Roboter etc. | Interaktive Diensstleistungsroboter | Autonome Dienstleistungsroboter |
 | Raumfahrt | Ferngesteuerte Roboterfahrzeuge | Autonome Roboterfahrzeuge | 
 Roboterschwärme |
-
+<br>
 ## Stufen des autonomen Fahren SAE J3016 
 
 ## Folgerungen:
