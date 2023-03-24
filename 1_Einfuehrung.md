@@ -11,6 +11,7 @@
 | Haushaltsgeräte | Staubsauger/Rasenmäher Roboter etc. | Interaktive Diensstleistungsroboter | Autonome Dienstleistungsroboter |
 | Raumfahrt | Ferngesteuerte Roboterfahrzeuge | Autonome Roboterfahrzeuge | Roboterschwärme |
 <br>
+
 ## Stufen des autonomen Fahren SAE J3016 
 
 ## Folgerungen:

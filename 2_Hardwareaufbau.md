@@ -8,6 +8,12 @@
   <li>Geländer -> Laufmaschinen</li>
   <li>Rohre -> Kettenantriebe</li>
   <li>Fassaden -> Saugnäpfe</li>
+  <li>Ebener Untergrund -> Räder</li>
+  <li>Geländer -> Laufmaschinen</li>
+  <li>Rohre -> Kettenantriebe</li>
+  <li>Fassaden -> Saugnäpfe</li>
+  <li>Katastrophenroboter ->  alle</li>
+</ol>
   <li>Katastrophenroboter ->  alle</li>
 </ol>
 
