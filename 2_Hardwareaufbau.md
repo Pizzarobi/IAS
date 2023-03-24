@@ -15,15 +15,13 @@ a wird in der Vorlesung besprochen <br>
 b - e Literatur
 
 ### <u>Flugzeuge</u>
-
 - Klassischer Triebwerskantrieb mit Flügeln
 - Multicopter
 - Computer gesteuerte unbemannte Luftfahrzeuge (C-UAV)
 
 -> wir konzentrieren uns auf Multicopter
-
+<br><br><br>
 ## 2.2 Multisensorik
-
 Erfassung der Umwelt
 
 ### <u>Odometrie</u>
@@ -52,3 +50,24 @@ Farbbilder, Pan-Tilt-Zoom, Erkennung Farbbereiche und Kanten, Entfernung Stereok
 
 ### <u>GNSS</u>
 Satellitennavigation, Genauigkeit 2m / 2cm
+<br>
+<br>
+<br>
+## 2.3 Aktoren
+
+Veränderunge der Umwelt<br>
+Manipulatioren mit Freiheitsgraden<br>
+-> 2 DOF Gruppen im Labor (Greifer + Lift)<br>
+Antriebskonzepte Räder -> Handout (Moodle)<br>
+
+- Differentialantrieb
+  - 2 DOF - x, yaw
+  - Angetrieben durch Gleichstrommotoren
+<br>
+- Fahr-/Drehmodul
+  - 2 DOF Rad -> 3 DOF Plattform
+<br>
+- Mecanum-Rad
+  - Kräfte in 2 Richtungen durch Walzen an den Rädern
+  - Nur auf Ebenem Grund nutzbar, sehr anfällig für Schmutz, starke Vibrationen, starker bodenverschleiß
+  - Störanfällig
