@@ -25,6 +25,14 @@ Elementare Verhaltensmuster bilden die Grundsteine für Intelligenz. <br>
 <u>Beispiel</u>: <br>
 - Erkundungsverhalten
 - Hindernisvermeidung
-- Nahrungsaufnahme
-<br>
+- Nahrungsaufnahme<br>
+
 Verhaltensmuster (Behaviors) haben unterschiedliche Komplexität. Jedes Verhaltensmuster ist eigenständig funktionsfähig. Niedere Schichten unterdrücken höhere. <br>
+
+## 3.4 Saphira
+Konolidge, SRI, 1999 <br><br>
+![Saphira](Images/saphira.png)
+
+- Verhaltensmuster berechnen gewünschte Aktorvorgaben, Resolver verknüpft die Wünsche der Verhaltensmuster zu konkreten Steuerbefehlen
+- PRS verwendet Schemata von Aktivitäten der Schema Library. Jedes Schema ist ein parametrierbarer endlicher Automat
+- THI RobCon ist eine einfache Implementierung der Direktsteuerung und Saphira in Java
