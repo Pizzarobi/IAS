@@ -40,3 +40,23 @@ nicht blockierend
 - warten von n Echtzeitzyklen zu je 100ms
 ### void setPose(int x, int y, int th)
 - Setzen der aktuellen Position des Roboters
+
+## Beispiel:
+```java
+package thi.robcon.app.script; // <- Unterverzeichnis im Projekt
+                       // Java-Konvention: alles klein schreiben
+                       // Eclipse: Veschriebungen mit Refactor -> Rename
+                       // Eclipse: Strg+Leer generiert
+import thi.robcon.ecar.IRobScript; // package - "IRobScript"=Klasse
+// import ...
+
+public class ServiceRoboticsScripts extends IRobConScript { // Oberklasse nur eine Möglich
+  public ServiceRoboticsScripts() { } // Konstruktor
+
+  protected void script() { patrol(); } // Implementierung einer Virtuellen Methode
+  protected void patrol() {
+    use Robot(ECarDefines.JSIM_DX1); // einfacher Emulator
+  }
+}
+// ... Weitere erklärung in Eclipse
+```
