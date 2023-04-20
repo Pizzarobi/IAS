@@ -26,6 +26,29 @@ Erzeugen Instanzen von Unterklassen der Oberklasse Desire für den Priority Reso
 `DesGrip, DesLift` -=- Manipulatorpositionen <br>
 
 
+## Priority Resolver
+- statische Priorität (Priotiy): gnerelle Wichtigkeit der Verhaltensmuster
+  - ^einmalig als Wert [0;100] festeglegt (0<100)
+- dynamische priotität (Strength): Situationsabhängig, in jedem Zyklus neu als Wert [0;1.0] festgelegt
+
+### Algorithmus:
+- Ordne Desires anch fallender Priorität der erzeugenden Verhaltensmuster
+- Für alle Steuergrößen s:
+```java	
+{
+    Desire r, c; r.value = 0; r.strength = 0;
+    // Für alle Desire d, solange wie unsere resutlierende Strenght < 1 ist
+    {
+        {// Für alle Deisre d1, ... dn mit di.priority == d.priority
+        c.value =  Summe di.value * di.strength;
+        c.strength = 1/n * Summe di.strength;
+        }
+    r.value += c.value; r.strength += c.strength;
+    }
+    s = r.value / r.strength;
+}
+```
+
 # HIER FEHLT NOCH STUFF
 
 
