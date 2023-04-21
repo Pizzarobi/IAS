@@ -147,4 +147,60 @@ public class RDMain {
 - 6 Basen (x,y,z) für Raumpunkt
   - (yaw, pitch, roll) für Orientierung (Euler-Winkel)
   - Drehung um jeweils z, y und x
-- 
+
+Vereinfachung bei ENU in einer Ebene:
+(Diagramm/Notability)
+
+Auslesen Roboterposition mit getPose() als Pose <br>
+- get(), set() für x,y,th
+- double x.findDistanceTo(Pose y)
+  - Euklidischer Abstand zwischen x und y
+- double x.findAngleTo(Pose y)
+  - Euklidscher Winkel zwischen x und y
+- double x.diffAngleTo(Pose y)
+  - Differenzwinkel Orientierungen von x und y
+
+## 5.4.2 Entfernungsdaten
+Bisher: Abfrage der Sonare einzeln und direkt
+
+Problem: 
+- Wiederverwendung Programme auf unterschiedlichen Robotern
+- Entfernungsmessung nicht nur mit Sensoren
+
+Abhilfe:<br>
+a) Konfiguration Multisensorsystem<br>
+b) Abfrage fusionierter Sensordaten in Regions of Interest<br>
+
+In THIRobCon:
+- robot.addLaser(); Einbindung Laserscanner in LPS
+- robot.addVCC4(); Einbindung Canon PTZ-Kamera
+- => später Persistentes Umfeldmodell mit Datenbank
+
+b) <br>
+b1) Auswertung Kreissegment<br>
+&emsp;Methode: double checkPolar()
+
+Beispiel: Orthogonales Andocken
+```java
+// Mit Kegel
+leftDist = (int) (checkPolar(2,10,relObstaclePose) - robot.getRadius());
+
+rightDist = (int) (checkPolar(-10,-2,null) - robot.getRadius());
+```
+b2) Auswertung Rechteck<br>
+&emsp; Methode: checkBox() <br>
+(Zeichnung/Notability)<br>
+
+Beispiel: Orthogonales Andocken
+```java
+// Mit Box                       P1.x  p1.y p2.x p2.y
+leftDist = (int) (robot.checkBox(2500, 500, 100, 100,relObstaclePose) - robot.getRadius());
+
+rightDist = (int) (robot.checkBox(2500, -500, 100, -100, null) - robot.getRadius());
+```
+
+Eintragung P in globale Karte erfordert Koordinatentransformation aus Roboterkoordinatensystem in basis Koordinatensystem<br>
+
+Beispiel: 2D-Koordinatentransformation<br>
+Drehmatrix und Verschiebungsvektor<br>
+(Zeichnung/Notability)<br>
