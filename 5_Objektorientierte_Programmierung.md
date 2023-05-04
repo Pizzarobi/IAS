@@ -204,3 +204,34 @@ Eintragung P in globale Karte erfordert Koordinatentransformation aus Roboterkoo
 Beispiel: 2D-Koordinatentransformation<br>
 Drehmatrix und Verschiebungsvektor<br>
 (Zeichnung/Notability)<br>
+
+# 5.4.2 Bilder
+- Merkmalsteuerung über Farben und Kanten
+- Farbbereiche durch Region Growing in Echtzeit -> ACTS
+- Kantenerkennung durch Hough Transformation nicht in Echtzeit -> Halcon
+- Trainieren Farbbrereiche offline zu Kanälen
+
+Auswertung in THI RobCon:<br>
+&emsp; int getNumBlock(int ch) Anzahl Blob im Kanal<br>
+&emsp; Blob getBlob(int ch, int i) Auslesen Blob i zum Kanal ch in Schleife<
+
+Auswertung eines Blob<br>
+&emsp; int getxcg() (x center of gravity) Koordinaten Blobschwerpunkt <br>
+&emsp; int getycg() bezogen auf Bildgröße <br>
+&emsp; int getArea() Zahl Pixel im Blob <br>
+&emsp; int getTop(), ... , getRight() Ausdehnung <br>
+
+Positionierung Kamera:<br>
+- BehCam Init Startuausrichtung Kamera pan und tilt (yaw und pitch)
+- DesCamPan, DesCamTilt dynamisch in den Verhahltensmustern
+
+## Beispiel: Signal Dock
+```
+-> start -------> find ----------> dock ----->
+     |             |                |
+ BehCam Init    BehRotate         BehConstTransVel BehStop
+ (success)      BehFindSignal     BehLiniFor?      (success)
+              (success, error)    BehAlign
+```
+
+
