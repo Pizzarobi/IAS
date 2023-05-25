@@ -26,6 +26,7 @@ Fahrzeug mit zwei Entfernungsensoren, Kreisförmiger Gitter mit Zunahme Gitterra
 Bei exakten Sensoren hinreichen wenn ein Sensor Belegung erkennt. Bei unsicheren Sensoren werden Unsicherheiten in den MEsswerten durch Wahrscheinlichkeiten ausgedrückt.<br>
 Berechnung Belegheitswahrscheinlichkeit über Evidenztheorie (Dempster-Shafer-Theorie): Verallgemeinerung Satz von Bayes. <br>
 Geg: Menge sich gegenseitig ausschließender Ereignisse *theta* (Wahrnehmungsrahmen)<br>
+
 ### Massefunktion m: 
 2^n -> [0,1]  mit m (theta) = 0 und SUM(x e 2^n) m(x) = 1 <br> 
 ordnet jedem Eregnis eine Wahrscheinlichkeit zu. <br>
@@ -39,3 +40,36 @@ Anpassung ⊕ auf Datenfusion mit zwei Sensoren<br>
 2⊕ = {∅,{B},{B'},⊖} <br>
 m1⊕m2 (B) := m1(B) m2(B) + m1(⊖)m2(B) + m1(B)m2(⊖) / 1 - m1(B')m2(B) - m2(B')m1(B) <br>
 m(⊖): Unschlüssigkeit Belegungsmessung bei exakten Sensoren 0 <br>
+
+
+## Ich glaub hier fehlt was
+
+## Beispiel, Fahrzeugklassen
+
+
+# 7.2 Selbstlokalisation
+Ziel: Bestimmung Fahrzeugposition in Karte anhand aktueller Sensordaten <br>
+Hier: Laserscanner als Sensor (SLAM) <br>
+Formale Aufgabe: Geg: Scan t (Referenzscan der Karte) <br>
+&emsp; &emsp; Scan s (Aktuell aufgenommener Scan) <br>
+&emsp; &emsp; Geg: l Lokalität des Fahrzeugs in der Karte <br>
+&emsp; &emsp; &emsp; match(l) -> p (l) e [0,1] <br>
+&emsp; &emsp; &emsp; p(l) ist umso größer, je besser sich s mit t nach bester Verschiebung und Drehung überdeckt <br>
+Die Berechnung von match ist ein Suchproblem im mehrdimensionalen Raum. <br>
+Vereinfachung Suchproblem durch Annahmen<br>
+* Gauß -Verteilung <br>
+&emsp; Approximation durch Gauß-Funktion, Verwendung von Erwartungswert und Varianz
+* Lokalitätsannahme<br>
+&emsp; Ungefähre von s im Koordinatensystem von t, z.B. durch GNSS oder Odometriedaten
+
+Damit scan-match als neue Funktion mit <br>
+&emsp; scan-match (s,t) = (µ match, ∑ match) mit µ match = (1x1y1⊖)⁻¹ Erwartungswert => Lokalität des Fahrzeug<br>
+&emsp; &emsp; ∑ match = (crazy Matrix) => Genauigkeit der Lokalität
+
+## Beispiel:
+Gängiger Algorithmus: <br>
+Markov-Lokalisation:<br>
+1. Vorhersage von l unter Verwendung von Odometriedaten (ungenau Position)
+1. Vorhersage von l mit scan-match
+1. Beschleunigung, Berechnung scan-match  durch rekursive Anwendung Partikalfilter -> Laborübung
+
