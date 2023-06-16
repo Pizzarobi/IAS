@@ -49,9 +49,45 @@ Erzeugen Instanzen von Unterklassen der Oberklasse Desire für den Priority Reso
 }
 ```
 
-# HIER FEHLT NOCH STUFF
+
+### Beispiel: Resolution TransVel
+
+<!-- Image of ResolutionTransVel -->
+![ResolutionTransVel](Images/ResolutionTransVel.png)
+
+### <u>1 Schritt:</u> Sortieren nach Priority
+
+=> v2 , v1, v4, v3
+
+### <u>2 Schritt:</u>
+
+&emsp; &emsp; c.value = -200 | => r.value = -200 <br>
+&emsp;c.strength = 0.5 | => r.strength = 0.5 <br>
+
+### <u>3 Schritt:</u>
+
+&emsp; c.value = 200 * 0.5 + (-100) *0,7 = 30 <br>
+&emsp; c.strength = 1/2 * (0,5 + 0,7) = 0,6 <br>
+&emsp; r.value = -200 + 30 = -170 <br>
+&emsp; r.strength = 0,5 + 0,6 = 1,1 <br>
+
+### <u>4 Schritt:</u>
+
+&emsp; s = 170/1,1 = 154 <br>
+
+### Strategy:
+Oberklasse endlicher Automat mit abstrakter Methode plan() im 100 ms Zyklus aufgerufen. <br>
+Aktivierung / Deaktivierung Automatenknoten
 
 
+# 5.2 Basisverhaltensmuster
+
+Behaviour | Beschreibung
+--- | ---
+BehConstTransVel<br> BehConstRotVel | Fahren mit konstanter Geschwindigkeit<br> (ohne Kollisiionsvermeidung, ohne alles)
+BehLimFor<br> BehLimBack | Annähern an Hindernisse mit <br> wechselnden Geschwindigkeiten
+BehCamInit | Initialisierung Kamera
+BehMove <br> BehTurn | Fahre nach Odemtriedaten <br> (untersch. Geschwindigkeit Räder)
 
 ### Beispiel: Andocken
 ```java
@@ -189,7 +225,10 @@ rightDist = (int) (checkPolar(-10,-2,null) - robot.getRadius());
 ```
 b2) Auswertung Rechteck<br>
 &emsp; Methode: checkBox() <br>
-(Zeichnung/Notability)<br>
+
+![checkBox](Images/checkBox.jpg)
+
+<br>
 
 Beispiel: Orthogonales Andocken
 ```java
@@ -203,7 +242,11 @@ Eintragung P in globale Karte erfordert Koordinatentransformation aus Roboterkoo
 
 Beispiel: 2D-Koordinatentransformation<br>
 Drehmatrix und Verschiebungsvektor<br>
-(Zeichnung/Notability)<br>
+
+![Drehmatrix](Images/drehmatrix.jpg)
+
+
+<br>
 
 # 5.4.2 Bilder
 - Merkmalsteuerung über Farben und Kanten
