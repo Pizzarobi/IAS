@@ -41,6 +41,12 @@ Anpassung ⊕ auf Datenfusion mit zwei Sensoren<br>
 m1⊕m2 (B) := m1(B) m2(B) + m1(⊖)m2(B) + m1(B)m2(⊖) / 1 - m1(B')m2(B) - m2(B')m1(B) <br>
 m(⊖): Unschlüssigkeit Belegungsmessung bei exakten Sensoren 0 <br>
 
+<u>Gegeben:</u> Messungen von Radar & Laserscanner bezogen auf eine Gitterzelle.
+
+m radar (B) = 0,6 &emsp; m laser (B) = 0,7 <br>
+m radar (θ) = 0,2 &emsp; m laser (θ) = 0,1 <br>
+&emsp; ^ unschlüssigkeit (Sensor ist sich nicht sicher) <br>
+
 
 ## Ich glaub hier fehlt was
 
