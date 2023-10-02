@@ -41,7 +41,7 @@ nicht blockierend
 ### void setPose(int x, int y, int th)
 - Setzen der aktuellen Position des Roboters
 
-## Beispiel:
+<!-- ## Beispiel:
 ```java
 package thi.robcon.app.script; // <- Unterverzeichnis im Projekt
                        // Java-Konvention: alles klein schreiben
@@ -59,4 +59,4 @@ public class ServiceRoboticsScripts extends IRobConScript { // Oberklasse nur ei
   }
 }
 // ... Weitere erklärung in Eclipse
-```
+``` -->

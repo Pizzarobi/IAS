@@ -16,6 +16,9 @@ Vorteil: Einfach zu implementieren
 
 ![SPA-Diagramm](Images/spa.png)
 
+Vorteile: wertfähig (Gedächtniss duch Planer)<br>
+Nachteile: Komplexität 
+
 ## 3.3 Subsumptionsarchitektur
 Brooks, MIT, 1986 <br>
 Frage: Warum kann ein Wurm mit seinem relativ kleinen Gehirn (Fadenwurm 302 Neuronen) in Echtzeit reagieren?

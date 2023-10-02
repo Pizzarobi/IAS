@@ -14,8 +14,6 @@
   <li>Fassaden -> Saugnäpfe</li>
   <li>Katastrophenroboter ->  alle</li>
 </ol>
-  <li>Katastrophenroboter ->  alle</li>
-</ol>
 
 a wird in der Vorlesung besprochen <br>
 b - e Literatur
@@ -26,7 +24,7 @@ b - e Literatur
 - Computer gesteuerte unbemannte Luftfahrzeuge (C-UAV)
 
 -> wir konzentrieren uns auf Multicopter
-<br><br><br>
+<br>
 ## 2.2 Multisensorik
 Erfassung der Umwelt
 

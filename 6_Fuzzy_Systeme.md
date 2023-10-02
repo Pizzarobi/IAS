@@ -1,4 +1,4 @@
-# 6. Fuzzy Systeme
+<!-- # 6. Fuzzy Systeme
 # 6.1 Fuzzy Logic
 ## (Scharfe) Menge
 Geg: Grundmenge G <br>
@@ -8,7 +8,7 @@ Geg: Grundmenge G <br>
 
 Alles mögliche an Mathe shit
 
-##
+## -->
 
 # Min Max Methode
 Zyklische Ausführung folgender Schritte

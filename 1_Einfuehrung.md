@@ -28,6 +28,3 @@
 - Steuerungskonzepte
 - Umweltmodellierung
 - Kooperation (Schwarmbildung etc.)
-
-## Literatur
-Handout in moodle
